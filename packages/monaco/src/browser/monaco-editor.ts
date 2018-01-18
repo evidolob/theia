@@ -191,6 +191,11 @@ export class MonacoEditor implements TextEditor, IEditorReference {
         this.editor.revealRangeInCenter(range!);
     }
 
+    revealRangeAtTop(raw: Range): void {
+        const range = this.p2m.asRange(raw);
+        this.editor.revealRangeAtTop(range!);
+    }
+
     focus() {
         this.editor.focus();
     }

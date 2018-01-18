@@ -41,6 +41,7 @@ export interface TextEditor extends Disposable, TextEditorSelection {
 
     revealPosition(position: Position): void;
     revealRange(range: Range): void;
+    revealRangeAtTop(range: Range): void;
 
     /**
      * Rerender the editor.
