@@ -7,7 +7,8 @@
     "@theia/monaco": "^0.3.7",
     "fs-extra": "^4.0.2",
     "valid-filename": "^2.0.1",
-    "vscode-textmate": "^3.2.0"
+    "vscode-textmate": "^3.2.0",
+    "oniguruma": "7.0.0"
   },
   "publishConfig": {
     "access": "public"

@@ -26,6 +26,11 @@ declare module monaco.editor {
         }
         readonly cursor: ICursor;
         setDecorations(decorationTypeKey: string, decorationOptions: IDecorationOptions[]): void;
+        /**
+		 * All decorations added through this call will get the ownerId of this editor.
+		 * @see IModel.deltaDecorations
+		 */
+        deltaDecorations(oldDecorations: string[], newDecorations: IModelDeltaDecoration[]): string[];
     }
 
     export interface IDecorationRenderOptions {

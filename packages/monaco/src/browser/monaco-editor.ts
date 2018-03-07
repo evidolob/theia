@@ -328,6 +328,10 @@ export class MonacoEditor implements TextEditor, IEditorReference {
         this.editor.setDecorations(type, decorationOptions);
     }
 
+    deltaDecorations(oldDecorations: string[], newDecorations: monaco.editor.IModelDeltaDecoration[]): string[] {
+        return this.editor.deltaDecorations(oldDecorations, newDecorations);
+    }
+
 }
 export namespace MonacoEditor {
     export interface ICommonOptions {

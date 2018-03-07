@@ -5508,6 +5508,12 @@ onetime@^2.0.0:
   dependencies:
     mimic-fn "^1.0.0"
 
+oniguruma@7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/oniguruma/-/oniguruma-7.0.0.tgz#cf258a8b1a2ec1d0d68964d6336df264008ebf4c"
+  dependencies:
+    nan "^2.0.9"
+
 oniguruma@^6.0.1:
   version "6.2.1"
   resolved "https://registry.yarnpkg.com/oniguruma/-/oniguruma-6.2.1.tgz#a50ee69642844ad1d252685aab187171b06ece04"

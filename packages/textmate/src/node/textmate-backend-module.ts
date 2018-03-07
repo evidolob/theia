@@ -6,7 +6,19 @@
  */
 
 import { ContainerModule } from "inversify";
+import { ConnectionHandler, JsonRpcConnectionHandler } from "@theia/core/lib/common/messaging";
+import { TextMateClient, tmPath, TextMateServer } from "../common/textmate-protocol";
+import { TextMateServerImpl } from "./textmate-server";
 
 export default new ContainerModule(bind => {
+    bind(TextMateServer).to(TextMateServerImpl).inSingletonScope();
 
+    bind(ConnectionHandler).toDynamicValue(ctx =>
+        new JsonRpcConnectionHandler<TextMateClient>(tmPath, client => {
+            const textMateServer = ctx.container.get<TextMateServer>(TextMateServer);
+            textMateServer.setClient(client);
+            return textMateServer;
+        })
+
+    ).inSingletonScope();
 });
